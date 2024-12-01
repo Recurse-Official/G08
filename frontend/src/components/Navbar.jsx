@@ -49,6 +49,9 @@ const Navbar = () => {
               <Link href="/user/profile">
                 <Button54>Profile</Button54>
               </Link>
+              <Link href="/user/history">
+                <Button54>My Courses</Button54>
+              </Link>
               <Button54Red
                 onClick={handleLogout}
               >

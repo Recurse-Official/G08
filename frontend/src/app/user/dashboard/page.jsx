@@ -36,7 +36,8 @@ const Dashboard = () => {
     try {
       setIsLoading(true); // Set loading state
       const response = await axios.post("http://127.0.0.1:5000/process_videos", body);
-      setGeneratedContent(`Success: ${JSON.stringify(response.data)}`);
+      // setGeneratedContent(`Success: ${JSON.stringify(response.data)}`);
+      router.push("/user/history");
     } catch (error) {
       console.error("Error generating content:", error);
       setGeneratedContent("Failed to generate content. Please try again.");
