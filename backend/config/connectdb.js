@@ -1,15 +1,14 @@
 import mongoose from 'mongoose';
 
-const connectDB = async (DATABASE_URL) => {
+const connectDB = async () => {
   try {
-    const DB_OPTIONS = {
-      dbName: "passportjsauth"
-    }
-    await mongoose.connect(DATABASE_URL, DB_OPTIONS)
-    console.log('Connected Successfully...')
+    console.log('Connecting to database:', process.env.DATABASE_URL); // Debug log
+    const connection = await mongoose.connect(process.env.DATABASE_URL);
+    console.log('MongoDB connected:', connection.connection.host);
   } catch (error) {
-    console.log(error)
+    console.error('Error connecting to MongoDB:', error.message);
+    process.exit(1); // Exit with failure
   }
-}
+};
 
-export default connectDB
+export default connectDB;

@@ -19,7 +19,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions))
 
- 
+connectDB();
 
 // JSON
 app.use(express.json())
