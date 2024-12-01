@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import connectDB from './config/connectdb.js'
 import passport from 'passport';
 import userRoutes from './routes/userRoutes.js'
+
 import './config/passport-jwt-strategy.js'
 const app = express()
 const port = process.env.PORT
@@ -23,6 +24,7 @@ connectDB();
 
 // JSON
 app.use(express.json())
+
 
 // Passport Middleware
 app.use(passport.initialize());
