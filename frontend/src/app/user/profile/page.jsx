@@ -43,6 +43,9 @@ const Profile = () => {
         <div className="w-full max-w-md p-8 bg-black text-white rounded-none   shadow-white border-4 border-white shadow-[1px_1px_0_0_black,2px_2px_0_0_black,3px_3px_0_0_black,4px_4px_0_0_black,5px_5px_0_0_black,6px_6px_0_0_black,7px_7px_0_0_black,8px_8px_0_0_black]">
           <h2 className="text-2xl font-bold mb-6 text-center">User Profile</h2>
           <div className="mb-4">
+            <label className="block font-medium mb-2">Name: {user._id}</label>
+          </div>
+          <div className="mb-4">
             <label className="block font-medium mb-2">Name: {user.name}</label>
           </div>
           <div className="mb-4">
